@@ -1,0 +1,148 @@
+/* Apply default styling to all elements */
+*{
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: "Poppins", sans-serif; /* Apply Poppins font */
+}
+
+/* Main container with background image */
+.main_box{
+    background: url("photo.jpg"); /* Background image */
+    height:100vh; /* Full screen height */
+    background-size: cover; /* Image covers full area */
+}
+
+/* Hamburger menu icon (open button) */
+.btn_one i{
+    color:white; /* Icon color */
+    font-size:30px; /* Icon size */
+    font-weight: 700; /* Bold icon */
+    position: absolute; /* Position relative to parent */
+    left: 16px; /* Space from left */
+    line-height: 60px; /* Vertical alignment */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s linear; /* Smooth animation */
+}
+ /* Sidebar container */
+.sidebar_menu{
+    position: fixed; /* Fixed position */
+    left: -350px; /* Hidden outside screen */
+    height:100vh; /* Full height */
+    width: 300px; /* Sidebar width */
+    background-color: rgba(255, 255, 255,0.1); /* Transparent background */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); /* Light shadow */
+    transition: all 0.3s linear; /* Smooth slide effect */
+}
+
+/* Sidebar logo section */
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px; /* Center vertically */
+    box-shadow: 0 2px 4px rgba(255, 255, 255,0.5);
+    height: 60px;
+}
+
+/* Logo text */
+.sidebar_menu .logo a {
+    position: absolute;
+    left:50px;
+    color:white;
+    text-decoration: none; /* Remove underline */
+    font-size:20px;
+    font-weight: 500px; /* Corrected (no px) */ 
+}
+
+/* Close (X) button */
+.sidebar_menu .btn_two i{
+    color:grey;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left:275px;
+     opacity: 0;  /* Hidden initially */
+    cursor:pointer;
+     transition: all 0.3s linear;
+}
+
+/* Menu list container */
+.sidebar_menu .menu{
+    color:white;
+    position: absolute;
+    width: 100%;
+    top:80px; /* Space below logo */
+}
+
+/* Each menu item */
+.sidebar_menu .menu li{
+    margin: 6px;
+    padding: 14px 20px;
+
+}
+ /* Menu icons and links */
+.sidebar_menu .menu i,a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+ /* Space between icon and text */
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+
+/* Social media section */
+.sidebar_menu .social_media{
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+
+/* Social icons */
+.sidebar_menu .social_media i{
+    color:white;
+    opacity:0.5; /* Slight transparent */
+    padding: 0 5px;
+}
+/* Hide checkbox */
+#check{
+    display: none;
+}
+
+/* Hover effect on menu item */
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Hover effect on open button */
+.btn_one i:hover{
+    font-size: 40px;
+}
+
+/* Hover effect on close button */
+.btn_two i:hover{
+    font-size: 30px;
+}
+
+/* Social icon hover effect */
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+/* When checkbox is checked → Show sidebar */
+#check:checked ~ .sidebar_menu{
+    left:0;
+} 
+/* Hide open button when sidebar opens */
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+/* Show close button when sidebar opens */
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+
+
+
+
+
